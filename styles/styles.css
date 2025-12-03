@@ -32,11 +32,13 @@
   display: block;
 }
 #es-rc #es-rc-content .es-section {
-  padding: 24px;
+  padding-inline: 24px;
+  margin-block: 24px;
 }
 @container es-rc-main (min-width: 660px) {
   #es-rc #es-rc-content .es-section {
-    padding: 32px;
+    padding-inline: 32px;
+    margin-block: 32px;
   }
 }
 #es-rc #es-rc-content .es-section-title {
@@ -233,6 +235,7 @@
   }
 }
 #es-rc #es-rc-content .es-shades {
+  padding-block: 24px;
   color: #3d1e1a;
   text-align: center;
   font-weight: 700;
@@ -258,6 +261,7 @@
     position: relative;
     color: #ffffff;
     background: unset;
+    padding-block: unset;
   }
   #es-rc #es-rc-content .es-shades__text {
     position: absolute;
@@ -271,8 +275,8 @@
     font-size: 12px;
   }
   #es-rc #es-rc-content .es-shades__text--1 {
-    top: 18%;
-    left: -4%;
+    top: 11%;
+    left: -4.5%;
     width: 16.6666666667%;
   }
   #es-rc #es-rc-content .es-shades__text--2 {
@@ -282,7 +286,7 @@
     width: 33.3333333333%;
   }
   #es-rc #es-rc-content .es-shades__text--3 {
-    bottom: 7%;
+    bottom: -4%;
     right: 16%;
     width: 25%;
   }
@@ -295,18 +299,19 @@
     font-size: 15px;
   }
   #es-rc #es-rc-content .es-shades__text--1 {
-    top: 16%;
-    left: -5%;
+    top: 11%;
+    left: -5.5%;
   }
   #es-rc #es-rc-content .es-shades__text--3 {
-    bottom: 5%;
+    bottom: -4%;
     right: 15%;
   }
 }
 #es-rc #es-rc-content .es-steps {
-  padding: 0;
   overflow: hidden;
-  margin-top: 32px;
+}
+#es-rc #es-rc-content .es-steps__bg-image-wrapper {
+  overflow: hidden;
 }
 #es-rc #es-rc-content .es-steps__bg-image {
   width: 175%;
@@ -317,7 +322,6 @@
   align-items: center;
   gap: 16px;
   margin: 24px auto;
-  padding: 16px;
 }
 #es-rc #es-rc-content .es-steps__steps-wrapper {
   display: flex;
@@ -336,13 +340,17 @@
   #es-rc #es-rc-content .es-steps {
     position: relative;
   }
+  #es-rc #es-rc-content .es-steps__bg-image-wrapper {
+    overflow: hidden;
+  }
   #es-rc #es-rc-content .es-steps__bg-image {
-    width: 100%;
+    width: 120%;
+    margin-left: -20%;
   }
   #es-rc #es-rc-content .es-steps__text-wrapper {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translateY(-50%);
     margin: 0;
     padding: 0;
@@ -353,9 +361,16 @@
     text-align: left;
   }
 }
-@container es-rc-main (min-width: 760px) {
+@container es-rc-main (min-width: 880px) {
+  #es-rc #es-rc-content .es-steps__bg-image {
+    width: 110%;
+    margin-left: -10%;
+  }
   #es-rc #es-rc-content .es-steps__text-wrapper {
-    padding: 32px;
+    left: 50%;
+    padding-right: 32px;
+    height: 80%;
+    justify-content: space-evenly;
   }
 }
 #es-rc #es-rc-content .es-undertones__flex-wrapper {
@@ -398,9 +413,6 @@
   font-size: 18.176px;
 }
 @container es-rc-main (min-width: 660px) {
-  #es-rc #es-rc-content .es-undertones {
-    padding-inline: 0;
-  }
   #es-rc #es-rc-content .es-undertones__flex-wrapper {
     flex-direction: row;
     gap: 0.5%;
@@ -410,7 +422,7 @@
     padding: 0;
   }
 }
-#es-rc #es-rc-content .es-results {
+#es-rc #es-rc-content .es-results__bg-img-wrapper {
   overflow: hidden;
 }
 #es-rc #es-rc-content .es-results__bg-img {
@@ -467,7 +479,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: calc(100% - 64px);
     height: 100%;
     flex-direction: row;
     justify-content: space-between;
@@ -479,7 +491,6 @@
     height: 80%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
     padding-bottom: 8px;
   }
   #es-rc #es-rc-content .es-results__flex-wrapper--left {
@@ -500,7 +511,7 @@
     margin-left: auto;
   }
 }
-@container es-rc-main (min-width: 768px) {
+@container es-rc-main (min-width: 880px) {
   #es-rc #es-rc-content .es-results__item {
     width: 80%;
     max-width: 310px;
@@ -571,7 +582,7 @@
 @container es-rc-main (min-width: 660px) {
   #es-rc #es-rc-content .es-cross__badge {
     top: 16%;
-    left: -16%;
+    left: 7%;
   }
 }
 @container es-rc-main (min-width: 920px) {
@@ -581,6 +592,9 @@
   }
   #es-rc #es-rc-content .es-cross__flex-item {
     width: 19%;
+  }
+  #es-rc #es-rc-content .es-cross__badge {
+    left: -15%;
   }
 }
 #es-rc #es-rc-content .es-disclaimer {
