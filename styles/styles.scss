@@ -13,6 +13,7 @@ $fs-header: 32px;
 $fs-header-md: 24px;
 $fs-header-lg: 34px;
 
+$px-XS: 4px;
 $px-S: 8px;
 $px-M: 16px;
 $px-L: 24px;
@@ -28,6 +29,8 @@ $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
 $media-breakpoint-lg: 992px;
 $media-breakpoint-xl: 1200px;
+
+$transition: all 0.2s ease-in-out;
 
 #es-rc #es-rc-content {
   font-family: $text-main;
@@ -214,6 +217,10 @@ $media-breakpoint-xl: 1200px;
         display: flex;
         align-items: center;
         gap: $px-M;
+        transition: $transition;
+        &:hover {
+          margin-left: -10px;
+        }
       }
       &__checkmark {
         width: 22px;
@@ -408,6 +415,15 @@ $media-breakpoint-xl: 1200px;
         padding: $px-L;
       }
     }
+    &__image {
+      transition: $transition;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &-wrapper {
+        overflow: hidden;
+      }
+    }
     &__text {
       text-wrap: balance;
       line-height: 1.6;
@@ -546,6 +562,87 @@ $media-breakpoint-xl: 1200px;
           height: 70%;
           gap: unset;
           padding-bottom: $px-M;
+        }
+      }
+    }
+  }
+
+  .es-cross {
+    &__flex {
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $px-L;
+      }
+      &-item {
+        position: relative;
+        width: 255px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: $px-M;
+        &:hover {
+          .es-cross__image,
+          .es-cross__badge {
+            transform: scale(1.1);
+          }
+
+          .es-cross__button {
+            background-color: $color-accent;
+          }
+        }
+      }
+    }
+    &__badge {
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      transition: $transition;
+    }
+    &__image {
+      transition: $transition;
+    }
+    &__text {
+      &-wrapper {
+        text-align: center;
+        line-height: 1.3;
+      }
+      &--title {
+        font-weight: $fw-bold;
+      }
+    }
+    &__button {
+      font-weight: $fw-bold;
+      text-transform: uppercase;
+      font-size: calc($fs-base * 0.9);
+      text-decoration: none;
+      background-color: $color-main;
+      color: $color-bg;
+      padding: 14px;
+      display: block;
+      text-align: center;
+      transition: $transition;
+      border-radius: $px-XS;
+      width: 100%;
+    }
+    @container es-rc-main (min-width: 660px) {
+      &__badge {
+        top: 16%;
+        left: -16%;
+      }
+    }
+    @container es-rc-main (min-width: 920px) {
+      &__flex {
+        &-wrapper {
+          gap: unset;
+          justify-content: space-between;
+        }
+        &-item {
+          width: 19%;
         }
       }
     }

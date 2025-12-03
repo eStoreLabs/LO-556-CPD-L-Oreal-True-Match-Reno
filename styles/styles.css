@@ -177,6 +177,10 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  transition: all 0.2s ease-in-out;
+}
+#es-rc #es-rc-content .es-features__list-item:hover {
+  margin-left: -10px;
 }
 #es-rc #es-rc-content .es-features__list__checkmark {
   width: 22px;
@@ -362,6 +366,15 @@
   text-align: center;
   padding: 24px;
 }
+#es-rc #es-rc-content .es-undertones__image {
+  transition: all 0.2s ease-in-out;
+}
+#es-rc #es-rc-content .es-undertones__image:hover {
+  transform: scale(1.05);
+}
+#es-rc #es-rc-content .es-undertones__image-wrapper {
+  overflow: hidden;
+}
 #es-rc #es-rc-content .es-undertones__text {
   text-wrap: balance;
   line-height: 1.6;
@@ -492,5 +505,74 @@
     height: 70%;
     gap: unset;
     padding-bottom: 16px;
+  }
+}
+#es-rc #es-rc-content .es-cross__flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+#es-rc #es-rc-content .es-cross__flex-item {
+  position: relative;
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+#es-rc #es-rc-content .es-cross__flex-item:hover .es-cross__image,
+#es-rc #es-rc-content .es-cross__flex-item:hover .es-cross__badge {
+  transform: scale(1.1);
+}
+#es-rc #es-rc-content .es-cross__flex-item:hover .es-cross__button {
+  background-color: #a5603f;
+}
+#es-rc #es-rc-content .es-cross__badge {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  transition: all 0.2s ease-in-out;
+}
+#es-rc #es-rc-content .es-cross__image {
+  transition: all 0.2s ease-in-out;
+}
+#es-rc #es-rc-content .es-cross__text-wrapper {
+  text-align: center;
+  line-height: 1.3;
+}
+#es-rc #es-rc-content .es-cross__text--title {
+  font-weight: 700;
+}
+#es-rc #es-rc-content .es-cross__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14.4px;
+  text-decoration: none;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 14px;
+  display: block;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  width: 100%;
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-cross__badge {
+    top: 16%;
+    left: -16%;
+  }
+}
+@container es-rc-main (min-width: 920px) {
+  #es-rc #es-rc-content .es-cross__flex-wrapper {
+    gap: unset;
+    justify-content: space-between;
+  }
+  #es-rc #es-rc-content .es-cross__flex-item {
+    width: 19%;
   }
 }/*# sourceMappingURL=styles.css.map */
